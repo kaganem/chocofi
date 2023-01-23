@@ -47,10 +47,19 @@
 
         Layer__3 {
             bindings = <
-       &trans         &none         &none         &none         &none       &none  &trans  &trans  &trans  &trans  &trans  &trans
- &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &trans  &trans  &trans  &trans  &trans  &trans
-       &trans         &none         &none        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                 &trans        &trans      &trans  &trans  &trans  &trans
+ &kp C_MEDIA_HOME       &kp ESC         &none         &none        &tog 4       &none     &kp C_BRI_UP           &none      &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE   &none
+     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR     &kp C_BRI_DN  &kp K_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT  &kp K_STOP   &none
+            &none         &none         &none         &none         &none       &none  &kp PRINTSCREEN  &kp SCROLLLOCK   &kp PAUSE_BREAK         &none   &kp ENTER   &none
+                                                     &trans        &trans      &trans           &trans          &trans            &trans
+            >;
+        };
+
+        Layer__4 {
+            bindings = <
+  &none           &none           &none   &none     &tog 4   &none   &none   &none       &none             &none        &none         &none
+  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP  &kp RIGHT   &none   &none   &none  &kp C_BLUE  &kp C_RED_BUTTON  &kp C_GREEN  &kp C_YELLOW
+  &none           &none           &none   &none      &none   &none   &none   &none       &none             &none        &none         &none
+                                          &none      &none   &none   &none   &none       &none
             >;
         };
     };
