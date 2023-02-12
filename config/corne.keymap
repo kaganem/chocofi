@@ -49,7 +49,7 @@
 &none    &kp NUMBER_1   &kp NUMBER_2            &kp N3                &kp N4                 &kp N5          &kp N6           &kp N7            &kp N8             &kp N9            &kp N0  &none
 &none  &kp LEFT_SHIFT      &kp LCTRL      &kp LEFT_ALT          &kp LEFT_GUI              &kp TILDE       &kp UNDER         &kp PLUS         &kp MINUS          &kp EQUAL  &kp SINGLE_QUOTE  &none
 &none        &kp PIPE  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH  &none
-                                               &kp ESC                &trans                 &trans          &trans           &trans           &kp RET
+                                              &kp CAPS                &trans                 &trans          &trans           &trans           &kp RET
             >;
         };
 
