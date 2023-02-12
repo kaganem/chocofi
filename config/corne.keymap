@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     conditional_layers {
@@ -46,26 +48,26 @@
             bindings = <
 &none    &kp NUMBER_1   &kp NUMBER_2            &kp N3                &kp N4                 &kp N5          &kp N6           &kp N7            &kp N8             &kp N9            &kp N0  &none
 &none  &kp LEFT_SHIFT      &kp LCTRL      &kp LEFT_ALT          &kp LEFT_GUI              &kp TILDE       &kp UNDER         &kp PLUS         &kp MINUS          &kp EQUAL  &kp SINGLE_QUOTE  &none
-&none    &kp CAPSLOCK  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH  &none
-                                                &trans                &trans                 &trans          &trans           &trans             &none
+&none        &kp PIPE  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH  &none
+                                               &kp ESC                &trans                 &trans          &trans           &trans           &kp RET
             >;
         };
 
         NAVIGATION {
             bindings = <
-&none     &kp F1     &kp F2      &kp F3       &kp F4         &kp F5   &kp F6    &kp F7         &kp F8     &kp F9    &kp F10  &none
-&none  &kp LSHFT  &kp LCTRL    &kp LALT     &kp LWIN        &kp F11  &kp F12  &kp LEFT       &kp DOWN     &kp UP  &kp RIGHT  &none
-&none   &kp CAPS  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp BACKSPACE  &kp INS  &kp HOME  &kt PAGE_DOWN  &kp PG_UP    &kp END  &none
-                                &kp ESC       &trans         &trans   &trans    &trans        &kp RET
+&none      &kp F1     &kp F2      &kp F3       &kp F4      &kp F5   &kp F6    &kp F7         &kp F8     &kp F9    &kp F10  &none
+&none   &kp LSHFT  &kp LCTRL    &kp LALT     &kp LWIN     &kp F11  &kp F12  &kp LEFT       &kp DOWN     &kp UP  &kp RIGHT  &none
+&none  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO  &kp INS  &kp HOME  &kt PAGE_DOWN  &kp PG_UP    &kp END  &none
+                                 &kp ESC       &trans      &trans   &trans    &trans        &kp RET
             >;
         };
 
         CONFIG {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp C_BRI_DN  &kp C_BRI_UP    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &none
+&none    &kp K_EDIT    &kp K_MENU    &kp K_FIND     &kp K_APP     &kp CRSEL     &kp C_REC      &kp C_PP  &kp C_PREVIOUS    &kp C_NEXT  &kp C_STOP  &none
+&none     &kp C_RED   &kp C_GREEN    &kp C_BLUE   &kp C_GREEN    &kp K_BACK    &kp K_UNDO    &kp K_REDO    &kp C_REWIND      &kp C_FF  &kp C_QUIT  &none
+                                     &bt BT_CLR        &trans        &trans        &trans        &trans    &out OUT_TOG
             >;
         };
 
