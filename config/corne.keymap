@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -30,10 +31,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <200>;// <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
     };
 
@@ -48,10 +51,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none        &kp Q        &kp W       &kp E           &kp R        &kp T            &kp Y       &kp U            &kp I        &kp O                 &kp P  &none
-&none  &bhm LSHFT A  &bhm LCTRL S  &bhm LALT D  &bhm LEFT_WIN F        &kp G            &kp H  &bhm RWIN J  &bhm RIGHT_ALT K  &bhm RCTRL L  &bhm RIGHT_SHIFT SEMI  &none
-&none        &kp Z        &kp X       &kp C           &kp V        &kp B            &kp N       &kp M        &kp COMMA      &kp DOT              &kp FSLH  &none
-                                    &kp TAB       &lt 2 ESC  &lt 1 SPACE  &lt 2 BACKSPACE   &lt 1 RET          &kp DEL
+&none  &kp Q  &kp W         &kp E          &kp R        &kp T            &kp Y           &kp U         &kp I    &kp O     &kp P  &none
+&none  &kp A  &kp S         &kp D          &kp F        &kp G            &kp H           &kp J         &kp K    &kp L  &kp SEMI  &none
+&none  &kp Z  &kp X         &kp C          &kp V        &kp B            &kp N           &kp M     &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &mt LALT TAB  &mt LCTRL ESC  &lt 1 SPACE  &lt 2 BACKSPACE  &mt LSHIFT RET  &mt LWIN DEL
             >;
         };
 
